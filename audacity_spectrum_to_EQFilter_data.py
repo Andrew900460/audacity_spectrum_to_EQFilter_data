@@ -10,6 +10,8 @@ with open(fileInput,"r") as file:
 lines = content.splitlines()
 total_points = len(lines)
 skip = 0
+# We have to limit how many points we use, becuse it seems that the Filter Curve only allows a limited number of points.
+# Idk what the actual limit is, but it appeared to be about 200. Hence that number.
 if(total_points > 200):
     skip = math.ceil(total_points / 200)
 
